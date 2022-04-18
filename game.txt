@@ -1,0 +1,45 @@
+import random
+#comp_num=random.randint(0,100)
+#comp_num=int(random.random()*100)
+
+list=['PLAYER 1 Please Start','PLAYER 2 Please Start']
+c1=0
+c2=0
+for i in range(2):
+    comp_num=int(random.random()*100)
+    print(list[i])
+    while(i==0):
+        my_num=int(input("enter your number between 1-100 :"))
+        if comp_num==my_num:
+            print("WOOWWW... CORRECT NUMBER")
+            c1+=1
+            break
+        elif my_num>comp_num:
+            print("your number is large")
+            c1+=1
+        else:
+            print("your number is small")
+            c1+=1
+    while(i==1):
+        my_num=int(input("enter your number between 1-100 :"))
+        if comp_num==my_num:
+            print("WOOWWW... CORRECT NUMBER")
+            c2+=1
+            break
+        elif my_num>comp_num:
+            print("your number is large")
+            c2+=1
+        else:
+            print("your number is small")
+            c2+=1
+print("COMPUTER CHOOSEN NUMBER IS :",comp_num)
+
+if c1>c2:
+    print("PLAYER 2 WIN BY CHOSEEN ATTEMPET IS :",c2)
+elif c2>c2:
+    print("PLAYER 1 WIN BY CHOSEEN ATTEMPET IS :",c1)
+else:
+    print("oops.. its a tie")
+            
+        
+        
